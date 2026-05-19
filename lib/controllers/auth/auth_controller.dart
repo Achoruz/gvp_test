@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gvp_test/models/user_model.dart';
-import 'package:gvp_test/views/home_page.dart';
-import 'package:gvp_test/views/login_page.dart';
+import 'package:gvp_test/models/user_model/user_model.dart';
+import 'package:gvp_test/resources/views/home/home_page.dart';
+import 'package:gvp_test/resources/views/login/login_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const _isLoggedInKey = 'is_logged_in';

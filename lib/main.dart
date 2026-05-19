@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gvp_test/controllers/auth_controller.dart';
-import 'package:gvp_test/views/home_page.dart';
-import 'package:gvp_test/views/login_page.dart';
+import 'package:gvp_test/controllers/auth/auth_controller.dart';
+import 'package:gvp_test/controllers/home/home_controller.dart';
+import 'package:gvp_test/resources/views/home/home_page.dart';
+import 'package:gvp_test/resources/views/login/login_page.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
       ),
       initialBinding: BindingsBuilder(() {
         Get.put(AuthController(), permanent: true);
+        Get.put(HomeController(), permanent: true);
       }),
       home: isLoggedIn ? const HomePage() : const LoginPage(),
     );
