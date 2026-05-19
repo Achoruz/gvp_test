@@ -30,26 +30,20 @@ class HomePage extends GetView<AuthController> {
                 color: Theme.of(context).colorScheme.primary,
               ),
               const SizedBox(height: 16),
-              Obx(
-                () {
-                  final greetingName = controller.username.value.isEmpty
-                      ? 'User'
-                      : controller.username.value;
+              Obx(() {
+                final greetingName = controller.username.value.isEmpty
+                    ? 'User'
+                    : controller.username.value;
 
-                  return Text(
-                    'Selamat datang, $greetingName',
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                      fontWeight: FontWeight.w700,
-                    ),
-                  );
-                },
-              ),
+                return Text(
+                  'Selamat datang, $greetingName',
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                    fontWeight: FontWeight.w700,
+                  ),
+                );
+              }),
               const SizedBox(height: 8),
-              const Text(
-                'Kamu sudah login. Saat app dibuka lagi, halaman ini akan tampil langsung.',
-                textAlign: TextAlign.center,
-              ),
             ],
           ),
         ),
